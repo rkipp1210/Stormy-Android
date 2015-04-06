@@ -87,6 +87,7 @@ public class MainActivity extends ActionBarActivity {
         if (networkInfo != null && networkInfo.isConnected()) {
             isAvailable = true;
         }
+
         return isAvailable;
     }
 
