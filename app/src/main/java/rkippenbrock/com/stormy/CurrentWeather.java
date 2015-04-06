@@ -53,6 +53,7 @@ public class CurrentWeather {
         } else if (mIcon.equals("partly-cloudy-night")) {
             iconId = R.drawable.cloudy_night;
         }
+        return iconId;
     }
 
     public String getFormattedTime() {
