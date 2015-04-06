@@ -10,8 +10,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="100"
-        android:id="@+id/temeratureLabel"
+        android:text="--"
+        android:id="@+id/temperatureLabel"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -21,9 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/degreeImageView"
-        android:layout_alignTop="@+id/temeratureLabel"
-        android:layout_toRightOf="@+id/temeratureLabel"
-        android:layout_toEndOf="@+id/temeratureLabel"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_toRightOf="@+id/temperatureLabel"
+        android:layout_toEndOf="@+id/temperatureLabel"
         android:src="@drawable/degree"
         android:layout_marginTop="50dp"/>
 
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:text="At 5:00 PM it will be"
         android:id="@+id/timeLabel"
-        android:layout_above="@+id/temeratureLabel"
+        android:layout_above="@+id/temperatureLabel"
         android:layout_centerHorizontal="true"
         android:textColor="#80ffffff"
         android:textSize="18sp"/>
@@ -62,7 +62,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/temeratureLabel"
+        android:layout_below="@+id/temperatureLabel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:id="@+id/linearLayout">
@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0.88"
+                android:text="--"
                 android:id="@+id/humidityValue"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
@@ -100,7 +100,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RAIN/SNOW?"
+                android:text="PRECIP %"
                 android:id="@+id/precipLabel"
                 android:textColor="#80ffffff"
                 android:gravity="center_horizontal"/>
@@ -108,8 +108,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="100%"
-                android:id="@+id/previpValue"
+                android:text="--"
+                android:id="@+id/precipValue"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 android:gravity="center_horizontal"/>
@@ -119,12 +119,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stormy with a chance of meatballs"
-        android:id="@+id/summary"
+        android:text="Getting Current Weather..."
+        android:id="@+id/summaryLabel"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:textColor="@android:color/white"
         android:textSize="18dp"
         android:gravity="center_vertical"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/refreshImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/refresh"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/refreshImageView"/>
 </RelativeLayout>
